@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PortafolioData – Leom Lopez</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+    <!-- HEADER E MENU -->
+    <header>
+        <div class="logo">
+            <strong>PortafolioData</strong>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEÇÃO SOBRE MIM -->
+        <section id="sobre" class="secao">
+            <h1>Sobre mim</h1>
+            <p>
+                Olá, meu nome é <strong>Leom Lopez</strong> e sou estudante e entusiasta 
+                de <strong>Ciência de Dados</strong>. Tenho interesse em análise exploratória, 
+                visualização e modelagem de dados, buscando transformar informação em 
+                insights que auxiliem a tomada de decisão.
+            </p>
+
+            <p>
+                Possuo conhecimentos em Python, SQL, estatística descritiva e 
+                manipulação de dados com bibliotecas como pandas e NumPy.
+                Também estudo visualização de dados e boas práticas de programação.
+            </p>
+
+            <p>
+                Este portfólio foi desenvolvido como parte da Atividade Prática da disciplina 
+                <em>Fundamentos da Programação Web – UNINTER</em>, utilizando apenas 
+                HTML5, CSS3 e JavaScript puro.
+            </p>
+        </section>
+
+        <!-- SEÇÃO FORMAÇÃO -->
+        <section id="formacao" class="secao">
+            <h2>Formação</h2>
+
+            <ul class="lista-formacao">
+                <li>
+                    <strong>Graduação em andamento</strong> – Foco em desenvolvimento, 
+                    raciocínio lógico e tecnologias digitais.
+                </li>
+
+                <li>
+                    <strong>Ciência de Dados</strong> – Estudos em análise exploratória, 
+                    limpeza de dados, Python, estatística e visualização.
+                </li>
+
+                <li>
+                    <strong>Idiomas:</strong> Português (intermediário), Espanhol (nativo), 
+                    Inglês (em desenvolvimento).
+                </li>
+            </ul>
+        </section>
+
+        <!-- SEÇÃO PORTFÓLIO -->
+        <section id="portfolio" class="secao">
+            <h2>Portfólio</h2>
+            <p>
+                Alguns projetos demonstrando habilidades em análise de dados, visualização, 
+                organização e tratamento de informações. Os links serão atualizados conforme 
+                novos trabalhos forem desenvolvidos.
+            </p>
+
+            <div class="grid-projetos">
+
+                <article class="projeto">
+                    <h3>Análise Exploratória de Vendas</h3>
+                    <p>
+                        Identificação de padrões, tendências e produtos com maior demanda
+                        por meio de estatística descritiva e gráficos.
+                    </p>
+                    <a href="#" class="btn-projeto" target="_blank">Ver projeto (em breve)</a>
+                </article>
+
+                <article class="projeto">
+                    <h3>Tratamento e Limpeza de Dados</h3>
+                    <p>
+                        Projeto voltado para padronização, correção e análise 
+                        de inconsistências em bases de dados reais.
+                    </p>
+                    <a href="#" class="btn-projeto" target="_blank">Ver projeto (em breve)</a>
+                </article>
+
+                <article class="projeto">
+                    <h3>Dashboard de Indicadores</h3>
+                    <p>
+                        Criação de painel visual para acompanhamento de métricas
+                        por meio de gráficos e indicadores simples.
+                    </p>
+                    <a href="#" class="btn-projeto" target="_blank">Ver projeto (em breve)</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO -->
+        <section id="contato" class="secao">
+            <h2>Contato</h2>
+            <p>
+                Preencha o formulário abaixo para entrar em contato. Os campos serão 
+                validados via JavaScript antes do envio.
+            </p>
+
+            <form id="form-contato">
+                <div class="campo-form">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+                </div>
+
+                <div class="campo-form">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required />
+                </div>
+
+                <div class="campo-form">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar</button>
+                <p id="mensagem-retorno" class="mensagem-retorno"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2025 PortafolioData – Desenvolvido por Leom Lopez | Atividade Prática – UNINTER</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
