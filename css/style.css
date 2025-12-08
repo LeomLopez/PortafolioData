@@ -1,241 +1,384 @@
-/* ============================
-   RESET BÁSICO E TIPOGRAFIA
-   ============================ */
+/* =======================================
+   1. RESET BÁSICO Y VARIABLES
+   ======================================= */
+:root {
+    /* Paleta de colores Data Science/Tech */
+    --color-principal: #1f3a5f; /* Azul Oscuro (Confianza, Profesionalismo) */
+    --color-acento: #00bcd4; /* Cian Brillante (Innovación, Datos) */
+    --color-fondo: #f8f9fa; /* Gris Claro/Blanco Suave */
+    --color-texto: #333;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+
+    /* Tipografía */
+    --fuente-titulo: 'Roboto Mono', monospace; /* Monoespaciada para un toque tech */
+    --fuente-cuerpo: 'Roboto', sans-serif;
+}
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #020617; /* fundo escuro elegante */
-    color: #e5e7eb;
-    line-height: 1.5;
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    scroll-behavior: smooth;
 }
 
-/* ============================
-   HEADER E MENU
-   ============================ */
+h1, h2, h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-principal);
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+a {
+    text-decoration: none;
+    color: var(--color-acento);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-principal);
+}
+
+/* =======================================
+   2. HEADER Y NAVEGACIÓN
+   ======================================= */
 header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px var(--color-sombra);
     position: sticky;
     top: 0;
-    z-index: 10;
-    background-color: #020617;
-    border-bottom: 1px solid #1f2937;
+    z-index: 1000;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0.85rem 1.5rem;
+    align-items: center;
+    padding: 15px 5%;
 }
 
 .logo strong {
-    color: #38bdf8;
-    font-weight: 700;
-    letter-spacing: 0.03em;
+    font-family: var(--fuente-titulo);
+    font-size: 1.5em;
+    color: var(--color-principal);
 }
 
-nav .menu {
+.menu {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 20px;
 }
 
-nav .menu a {
-    color: #e5e7eb;
-    text-decoration: none;
-    font-size: 0.95rem;
-    padding: 0.4rem 0.9rem;
-    border-radius: 999px;
-    transition: background 0.2s, color 0.2s, transform 0.1s;
+.menu a {
+    color: var(--color-principal);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent; 
+    transition: border-bottom 0.3s ease;
 }
 
-nav .menu a:hover {
-    background-color: #38bdf8;
-    color: #020617;
-    transform: translateY(-1px);
+.menu a:hover {
+    color: var(--color-acento);
+    border-bottom: 2px solid var(--color-acento);
 }
 
-/* ============================
-   CONTEÚDO PRINCIPAL
-   ============================ */
+/* =======================================
+   3. SECCIÓN HERO (BANNER PRINCIPAL)
+   ======================================= */
+.hero {
+    background-color: var(--color-principal);
+    color: #ffffff;
+    padding: 100px 5%;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 1.8em;
+    color: var(--color-acento);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-principal);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* =======================================
+   4. ESTRUCTURA PRINCIPAL Y SECCIONES
+   ======================================= */
 main {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem 3rem;
+    padding: 20px;
 }
 
 .secao {
-    margin-bottom: 2.5rem;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
 }
 
-.secao h1,
-.secao h2 {
-    margin-bottom: 0.9rem;
-    color: #f9fafb;
+.secao:last-child {
+    border-bottom: none;
 }
 
-.secao p {
-    margin-bottom: 0.8rem;
-    color: #cbd5f5;
+/* Títulos de sección con línea de acento */
+.secao h1::after,
+.secao h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--color-acento);
+    margin-top: 5px;
+    margin-bottom: 20px; /* Espaciado extra para el texto */
 }
 
-/* ============================
-   LISTA DE FORMAÇÃO
-   ============================ */
+/* Estilo del texto "Sobre Mim" */
+#sobre p strong {
+    color: var(--color-acento);
+    font-weight: 700;
+}
+
+.sobre-contenido {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.perfil-foto {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Foto redonda */
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--color-sombra);
+}
+
+.social-links {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-family: var(--fuente-titulo);
+}
+
+/* =======================================
+   5. SECCIÓN FORMACIÓN
+   ======================================= */
 .lista-formacao {
-    list-style: disc;
-    margin-left: 1.5rem;
-    color: #cbd5f5;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.lista-formacao li + li {
-    margin-top: 0.5rem;
+.lista-formacao li {
+    padding-left: 30px;
+    position: relative;
 }
 
-/* ============================
-   PORTFÓLIO – GRID DE PROJETOS
-   ============================ */
+/* Punto de acento para cada elemento de la lista */
+.lista-formacao li::before {
+    content: '▶';
+    color: var(--color-acento);
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* =======================================
+   6. SECCIÓN PORTAFOLIO (GRID)
+   ======================================= */
 .grid-projetos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .projeto {
-    background-color: #020617;
-    border: 1px solid #1f2937;
-    border-radius: 0.9rem;
-    padding: 1rem;
-    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.5);
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--color-sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid var(--color-acento); 
 }
 
-.projeto h3 {
-    margin-bottom: 0.5rem;
-    color: #f9fafb;
-}
-
-.projeto p {
-    font-size: 0.9rem;
-    color: #cbd5f5;
-    margin-bottom: 0.75rem;
+/* Efecto Hover para destacar el proyecto */
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 188, 212, 0.2); 
 }
 
 .btn-projeto {
     display: inline-block;
-    font-size: 0.85rem;
-    padding: 0.45rem 0.9rem;
-    border-radius: 999px;
-    border: 1px solid #38bdf8;
-    color: #38bdf8;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s, transform 0.1s;
+    background-color: var(--color-principal);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
 }
 
 .btn-projeto:hover {
-    background-color: #38bdf8;
-    color: #020617;
-    transform: translateY(-1px);
+    background-color: var(--color-acento);
+    color: var(--color-principal);
 }
 
-/* ============================
-   FORMULÁRIO DE CONTATO
-   ============================ */
-form {
-    margin-top: 1rem;
-    background-color: #020617;
-    border-radius: 0.9rem;
-    padding: 1rem;
-    border: 1px solid #1f2937;
-    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.5);
+/* =======================================
+   7. SECCIÓN CONTACTO (FORMULARIO)
+   ======================================= */
+#form-contato {
+    max-width: 600px;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--color-sombra);
 }
 
 .campo-form {
-    margin-bottom: 0.9rem;
+    margin-bottom: 20px;
 }
 
 .campo-form label {
     display: block;
-    margin-bottom: 0.35rem;
-    font-size: 0.9rem;
-    color: #e5e7eb;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--color-principal);
 }
 
-.campo-form input,
+.campo-form input[type="text"],
+.campo-form input[type="email"],
 .campo-form textarea {
     width: 100%;
-    padding: 0.55rem 0.7rem;
-    border-radius: 0.6rem;
-    border: 1px solid #334155;
-    background-color: #020617;
-    color: #e5e7eb;
-    font-size: 0.9rem;
-}
-
-.campo-form input::placeholder,
-.campo-form textarea::placeholder {
-    color: #64748b;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .campo-form input:focus,
 .campo-form textarea:focus {
-    outline: 1px solid #38bdf8;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+    outline: none;
 }
 
 .btn-enviar {
-    background-color: #38bdf8;
-    color: #020617;
+    background-color: var(--color-acento);
+    color: var(--color-principal);
+    padding: 12px 25px;
     border: none;
-    border-radius: 999px;
-    padding: 0.55rem 1.4rem;
+    border-radius: 5px;
+    font-weight: bold;
     cursor: pointer;
-    font-weight: 600;
-    margin-top: 0.25rem;
-    font-size: 0.9rem;
-    transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 .btn-enviar:hover {
-    background-color: #0ea5e9;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 18px rgba(56, 189, 248, 0.35);
+    background-color: #00e5ff;
 }
 
-.mensagem-retorno {
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
-}
-
-/* ============================
-   RODAPÉ
-   ============================ */
+/* =======================================
+   8. RODAPÉ (FOOTER)
+   ======================================= */
 footer {
-    border-top: 1px solid #1f2937;
-    padding: 1rem;
     text-align: center;
-    font-size: 0.8rem;
-    color: #9ca3af;
-    background-color: #020617;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: #c9e7f8;
+    margin-top: 40px;
+    font-size: 0.9em;
 }
 
-/* ============================
-   RESPONSIVIDADE BÁSICA
-   ============================ */
-@media (max-width: 640px) {
+/* =======================================
+   9. RESPONSIVIDAD (MOBILE FIRST)
+   ======================================= */
+@media (max-width: 900px) {
+    .sobre-contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil-foto {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        text-align: center;
+        padding: 15px 20px;
     }
 
-    nav .menu {
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .menu {
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
+        gap: 10px;
     }
 
-    main {
-        padding: 1.5rem 1rem 2.5rem;
+    .secao {
+        padding: 40px 10px;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero h2 {
+        font-size: 1.4em;
     }
 }
