@@ -1,170 +1,147 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PortafolioData – Leom Lopez</title>
-    
-    <link rel="stylesheet" href="css/style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+
+    <!-- HEADER NORMAL -->
     <header>
         <div class="logo">
             <strong>PortafolioData</strong>
+            <span class="logo-sub">Portfólio em Ciência de Dados</span>
         </div>
         <nav>
             <ul class="menu">
-                <li><a href="#sobre">Sobre mí</a></li>
-                <li><a href="#formacion">Formación</a></li>
-                <li><a href="#portfolio">Portafolio</a></li>
-                <li><a href="#contato">Contacto</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- BANNER DE PORTADA -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1 class="hero-title">Leom Lopez</h1>
+            <p class="hero-subtitle">Portafolio em Ciência de Dados</p>
+
+            <nav class="hero-nav">
+                <a href="#sobre">Sobre mim</a>
+                <a href="#formacao">Formação</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
-        <section class="hero">
-            <div class="hero-texto">
-                <h1>Leom Lopez</h1>
-                <h2>Data Science Enthusiast | Transformando **Datos** en **Insights**</h2>
-                <p>Especializado en Python, SQL y Visualización para optimizar la toma de decisión.</p>
-                <a href="#portfolio" class="btn-hero">Ver Proyectos</a>
-            </div>
-        </section>
 
+        <!-- SOBRE MIM -->
         <section id="sobre" class="secao">
-            <div class="sobre-contenido">
-                <div>
-                    <h1>Sobre mí</h1>
-                    <p>
-                        Hola, mi nombre es <strong>Leom Lopez</strong> y soy estudiante y entusiasta 
-                        de la **Ciencia de Datos**. Tengo interés en análisis exploratorio, 
-                        visualización y modelado de datos, buscando transformar información en 
-                        insights que auxilien la toma de decisión.
-                    </p>
-
-                    <p>
-                        Poseo conocimientos en **Python**, **SQL**, estadística descriptiva y 
-                        manipulación de datos con bibliotecas como pandas y NumPy.
-                        También estudio visualización de datos y buenas prácticas de programación.
-                    </p>
-
-                    <p>
-                        Este portafolio fue desarrollado como parte de la Actividad Práctica de la disciplina 
-                        <em>Fundamentos da Programação Web – UNINTER</em>, utilizando apenas 
-                        HTML5, CSS3 y JavaScript puro.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" target="_blank">LinkedIn</a> |
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                <div class="perfil-foto">
-                    
-
-[Image of a professional data scientist working on a computer showing a dashboard]
-
-                    </div>
+            <div class="secao-header">
+                <h2>Sobre mim</h2>
+                <p class="secao-subtitulo">Perfil focado em Ciência de Dados.</p>
             </div>
-        </section>
 
-        <section id="formacao" class="secao">
-            <h2>Formación</h2>
+            <p>
+                Olá, meu nome é <strong>Leom Lopez</strong> e sou estudante e entusiasta 
+                de Ciência de Dados. Tenho interesse em análise exploratória, 
+                visualização e modelagem de dados, buscando transformar informação 
+                em insights que auxiliem decisões estratégicas.
+            </p>
 
-            <ul class="lista-formacao">
-                <li>
-                    <strong>Graduación en curso</strong> – Enfoque en desarrollo, 
-                    razonamiento lógico y tecnologías digitales.
-                </li>
-
-                <li>
-                    <strong>Ciencia de Datos</strong> – Estudios en análisis exploratorio, 
-                    limpieza de datos, Python, estadística y visualización.
-                </li>
-
-                <li>
-                    <strong>Idiomas:</strong> Portugués (intermedio), Español (**nativo**), 
-                    Inglés (en desarrollo).
-                </li>
+            <ul class="tags-habilidades">
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Pandas</li>
+                <li>Visualização</li>
+                <li>Estatística</li>
             </ul>
         </section>
 
+        <!-- FORMAÇÃO -->
+        <section id="formacao" class="secao">
+            <div class="secao-header">
+                <h2>Formação</h2>
+                <p class="secao-subtitulo">Formação acadêmica e complementar.</p>
+            </div>
+
+            <ul class="lista-formacao">
+                <li><strong>Graduação em andamento</strong> – foco em tecnologia e desenvolvimento.</li>
+                <li><strong>Ciência de Dados</strong> – análise exploratória, limpeza e modelagem.</li>
+                <li><strong>Idiomas:</strong> Português (intermediário), Espanhol (nativo), Inglês (aprendizado).</li>
+            </ul>
+        </section>
+
+        <!-- PORTFÓLIO -->
         <section id="portfolio" class="secao">
-            <h2>Portafolio</h2>
-            <p>
-                Algunos proyectos demostrando habilidades en análisis de datos, visualización, 
-                organización y tratamiento de informaciones. Los enlaces serán actualizados conforme 
-                nuevos trabajos sean desarrollados.
-            </p>
+            <div class="secao-header">
+                <h2>Portfólio</h2>
+                <p class="secao-subtitulo">Projetos e aplicações práticas.</p>
+            </div>
 
             <div class="grid-projetos">
 
                 <article class="projeto">
-                    <h3>Análisis Exploratorio de Ventas</h3>
-                    <p>
-                        Identificación de patrones, tendencias y productos con mayor demanda
-                        por medio de estadística descriptiva y gráficos.
-                    </p>
-                    <a href="#" class="btn-projeto" target="_blank">Ver proyecto (en breve)</a>
+                    <h3>Análise Exploratória de Vendas</h3>
+                    <p>Identificação de tendências através de estatística e gráficos.</p>
+                    <a href="#" class="btn-projeto">Ver projeto (em breve)</a>
                 </article>
 
                 <article class="projeto">
-                    <h3>Tratamiento y Limpieza de Datos</h3>
-                    <p>
-                        Proyecto enfocado en estandarización, corrección y análisis 
-                        de inconsistencias en bases de datos reales.
-                    </p>
-                    <a href="#" class="btn-projeto" target="_blank">Ver proyecto (en breve)</a>
+                    <h3>Tratamento de Dados</h3>
+                    <p>Correção, padronização e limpeza de bases reais.</p>
+                    <a href="#" class="btn-projeto">Ver projeto (em breve)</a>
                 </article>
 
                 <article class="projeto">
                     <h3>Dashboard de Indicadores</h3>
-                    <p>
-                        Creación de panel visual para acompañamiento de métricas
-                        por medio de gráficos e indicadores simples.
-                    </p>
-                    <a href="#" class="btn-projeto" target="_blank">Ver proyecto (en breve)</a>
+                    <p>Painéis com métricas e visualizações informativas.</p>
+                    <a href="#" class="btn-projeto">Ver projeto (em breve)</a>
                 </article>
 
             </div>
         </section>
 
+        <!-- CONTATO -->
         <section id="contato" class="secao">
-            <h2>Contacto</h2>
-            <p>
-                Rellena el formulario abajo para entrar en contacto. Los campos serán 
-                validados vía JavaScript antes del envío.
-            </p>
+            <div class="secao-header">
+                <h2>Contato</h2>
+                <p class="secao-subtitulo">Envie sua mensagem.</p>
+            </div>
 
             <form id="form-contato">
                 <div class="campo-form">
-                    <label for="nome">Nombre</label>
-                    <input type="text" id="nome" name="nome" placeholder="Tu nombre completo" required />
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text" placeholder="Seu nome completo" required />
                 </div>
 
                 <div class="campo-form">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="tuemail@dominio.com" required />
+                    <input id="email" type="email" placeholder="seuemail@dominio.com" required />
                 </div>
 
                 <div class="campo-form">
-                    <label for="mensagem">Mensaje</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Tu mensaje" required></textarea>
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
                 </div>
 
                 <button type="submit" class="btn-enviar">Enviar</button>
-                <p id="mensagem-retorno" class="mensagem-retorno"></p>
+                <p id="mensagem-retorno"></p>
             </form>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2025 PortafolioData – Desarrollado por Leom Lopez | Actividad Práctica – UNINTER</p>
+        <p>&copy; 2025 PortafolioData – Desenvolvido por Leom Lopez | UNINTER</p>
     </footer>
 
     <script src="script.js"></script>
