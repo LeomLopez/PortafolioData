@@ -63,26 +63,40 @@ header {
 /* ===================================
    HERO (BANNER DE PORTADA)
 =================================== */
+/* HERO (PORTADA A PANTALLA COMPLETA) */
 .hero {
-    min-height: 74vh;
+    height: 100vh; /* cubre toda la pantalla */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 
     background-image:
-        linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-        url("../imagens/banner.jpg");
+        linear-gradient(rgba(15,23,42,0.78), rgba(15,23,42,0.78)),
+        url("../imagens/banner.jpg"); /* ajusta carpeta si usas img/ */
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
+.hero-overlay {
+    padding: 2rem 1.5rem;
+}
+
+.hero-brand {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #cbd5f5;
+    margin-bottom: 0.8rem;
+}
 
 .hero-title {
     font-size: 2.8rem;
     color: #f8fafc;
     letter-spacing: 0.08em;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
@@ -93,23 +107,41 @@ header {
 
 .hero-nav {
     display: inline-flex;
-    gap: .8rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
 }
 
 .hero-nav a {
-    padding: .5rem 1rem;
-    border: 1px solid #38bdf8;
+    padding: 0.55rem 1.1rem;
     border-radius: 999px;
+    border: 1px solid #38bdf8;
     text-decoration: none;
     color: #e2e8f0;
-    background-color: rgba(15,23,42,0.4);
+    background-color: rgba(15,23,42,0.55);
     backdrop-filter: blur(8px);
-    transition: .2s;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
 }
 
 .hero-nav a:hover {
     background-color: #38bdf8;
     color: #020617;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+    .hero {
+        height: 90vh;
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
 }
 
 /* ===================================
