@@ -73,7 +73,7 @@ header {
 
     background-image:
         linear-gradient(rgba(15,23,42,0.78), rgba(15,23,42,0.78)),
-        url("../imagens/banner.jpg"); /* ajusta carpeta si usas img/ */
+        url("../imagens/banneropti.jpg"); /* ajusta carpeta si usas img/ */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
